@@ -11,4 +11,5 @@ Andover Robotics Club Website:
 ARC Thunder 2016-2017 Online Documentation:
  https://drive.google.com/drive/folders/0B1Z4MGrlsAEJVl9OYzVlSEJicUk?usp=sharing
   - This folder includes pictures of ARC Thunder's progress and the file that contains documentation.
+  - The folder is not accessible to everyone, contact a board member to ask for editing access.
 
