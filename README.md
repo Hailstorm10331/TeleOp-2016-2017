@@ -5,7 +5,7 @@ Whenever creating or editing code for the robot, please use the .xml file in thi
 
 Remember, only one person edits or changes code at one time. Also, update code on GitHub after you are finished changing it.
 
-# Useful Resources:
+## Useful Resources:
 [Andover Robotics Club Website] (http://www.andoverrobotics.com/home)
   - The ARC website includes the club calendar with meeting dates and times.
   
