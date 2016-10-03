@@ -5,8 +5,8 @@ Remember, only one person edits or changes code at one time. Also, update code o
 
 # Useful Resources:
 Andover Robotics Club Website --- http://www.andoverrobotics.com/home
-  - This includes the club calendar with meeting times.
+  - The ARC website includes the club calendar with meeting dates and times.
   
 ARC Thunder 2016-2017 Online Documentation --- https://drive.google.com/drive/folders/0B1Z4MGrlsAEJVl9OYzVlSEJicUk?usp=sharing
-  - This includes pictures of ARC Thunder's progress and the file that contains documentation.
+  - This folder includes pictures of ARC Thunder's progress and the file that contains documentation.
 
