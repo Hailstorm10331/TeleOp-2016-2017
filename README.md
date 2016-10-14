@@ -15,5 +15,10 @@ Remember, only one person edits or changes code at one time. Also, update code o
   
 [FTC Android Studio Project] (https://github.com/ftctechnh/ftc_app)
   - This is FTC's Android Studio Project for creating the FTC Robot Controller app. 
+  
+### Other Resources:
+[FTC - Java Programming] (http://paws.kettering.edu/~webe3546/FTCJavaProgramming.pdf)
+  - This gives a basic rundown of how to use Android Studio in coding for the robot.
+  - This presentation is made for to last year's FTC app (2015-2016), so some of the code might be outdated. 
 
 
