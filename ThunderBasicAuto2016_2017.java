@@ -67,7 +67,7 @@ public class ThunderBasicAuto2016_2017 extends OpMode {
         motor4 = hardwareMap.dcMotor.get("motorBack2");
 
         /**Setting channel modes
-         *  When setting channel modes, */
+         *  When setting channel modes,  use the names that are declared to the motors. */
         motor1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         motor2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         motor3.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
