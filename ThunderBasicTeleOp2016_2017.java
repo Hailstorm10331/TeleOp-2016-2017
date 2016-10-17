@@ -51,7 +51,8 @@ public class ThunderBasicTeleOp2016_2017 extends OpMode {
 
         leftpower = Range.clip(leftpower, -1, 1);       //range of power, min first then max
         rightpower = Range.clip(rightpower, -1, 1);
-
+        /* We should multiply the joysticks' value by a float less than 1 so that the wheels are not too fast
+           They are already geared up in speed*/
         motor1.setPower(rightpower);                    //connects the value for power to the actual power of the motors
         motor2.setPower(leftpower);
         motor3.setPower(rightpower);
