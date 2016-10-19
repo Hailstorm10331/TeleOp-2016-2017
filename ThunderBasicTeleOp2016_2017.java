@@ -31,10 +31,10 @@ public class ThunderBasicTeleOp2016_2017 extends OpMode {
         motorControllerP1 = hardwareMap.dcMotorController.get("MCP1");
 
 
-        motor1 = hardwareMap.dcMotor.get("motorFrontR");
-        motor2 = hardwareMap.dcMotor.get("motorFrontL");
-        motor3 = hardwareMap.dcMotor.get("motorBack1");
-        motor4 = hardwareMap.dcMotor.get("motorBack2");
+        motor1 = hardwareMap.dcMotor.get("motorFrontR");        //MCP1
+        motor2 = hardwareMap.dcMotor.get("motorFrontL");        //MCP1
+        motor3 = hardwareMap.dcMotor.get("motorBack1");         //MCP0          Back of motor 1
+        motor4 = hardwareMap.dcMotor.get("motorBack2");         //MCP0          Back of motor 2
 
         /*Setting channel modes*/
         motor1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
@@ -42,21 +42,22 @@ public class ThunderBasicTeleOp2016_2017 extends OpMode {
         motor3.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         motor4.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
+
+
     }
+
     @Override
-    public void loop() {                                //constant loop that rechecks about every 20ms
+    public void loop() {                                                                                                     //constant loop that rechecks about every 20ms
+        double GearRatio = 0.25;                                                                                             //We geared up from 80 teeth to 40 teeth: this is needed so that we don't go too fast)
+        double leftpower = Math.pow(gamepad1.left_stick_y * GearRatio * -1, 3/*The power the value before is raised */);     //set's a value for power equal to the opposite of the value of the joysticks for the left
+        double rightpower = Math.pow(gamepad1.right_stick_y * GearRatio, 3);                                                 //set's a value for power equal to the value of the joysticks for the right
 
-        double leftpower = gamepad1.left_stick_y;       //set's a value for power equal to the value of the joysticks for the left
-        double rightpower = gamepad1.right_stick_y;     //set's a value for power equal to the value of the joysticks for the right
-
-        leftpower = Range.clip(leftpower, -1, 1);       //range of power, min first then max
-        rightpower = Range.clip(rightpower, -1, 1);
-        /* We should multiply the joysticks' value by a float less than 1 so that the wheels are not too fast
-           They are already geared up in speed*/
+        leftpower = Range.clip(leftpower, -1, 1);        //gamepad controllers have a value of 1 when you push it to its maximum foward
+        rightpower = Range.clip(rightpower, -1, 1);      //range of power, min first then max
         motor1.setPower(rightpower);                    //connects the value for power to the actual power of the motors
         motor2.setPower(leftpower);
-        motor3.setPower(rightpower);
-        motor4.setPower(leftpower);
+        motor3.setPower(leftpower);
+        motor4.setPower(rightpower);
 
         telemetry.addData("LeftMotors", "Left Motor Power:" + leftpower);           //shows the data or text stated onto phone telemetry
         telemetry.addData("RightMotors", "Right Motor Power:" + rightpower);
