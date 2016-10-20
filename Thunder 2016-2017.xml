@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
 <Robot type="FirstInspires-FTC">
-    <MotorController name="P1 Motor Controller" serialNumber="A104OQP1">
-        <Motor name="Motor 1" port="1" />
-        <Motor name="Motor 2" port="2" />
+    <MotorController name="MCP1" serialNumber="A104OQP1">
+        <Motor name="motorFrontR" port="1" />
+        <Motor name="motorFrontL" port="2" />
     </MotorController>
-    <MotorController name="P0 Motor Controller" serialNumber="A104OQ68">
-        <Motor name="Motor 3" port="1" />
-        <Motor name="Motor 4" port="2" />
+    <MotorController name="MCP0" serialNumber="A104OQ68">
+        <Motor name="motorBack1" port="1" />
+        <Motor name="motorBack2" port="2" />
     </MotorController>
 </Robot>
