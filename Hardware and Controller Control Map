@@ -2,21 +2,22 @@ PLEASE UPDATE WHENEVER HARDWARE / CONTROL MAP CHANGES!
 
 HARDWARE MAP
   Motor Controllers:
-    - motorControllerP0 = Motor controller plugged into port 0 of the core power module
-    - motorControllerP1 = Motor controller plugged into port 1 of the core power module
+    - MCP0 = Motor controller plugged into port 0 of the core power module
+    - MCP1 = Motor controller plugged into port 1 of the core power module
   
   Motors: 
-    - motor1 = Motor plugged into motor slot 1 of motor controller 1, front right wheel motor
-    - motor2 = Motor plugged into motor slot 2 of motor controller 1, front left wheel motor
-    - motor3 = Motor plugged into motor slot 1 of motor controller 0, back left wheel motor
-    - motor4 = Motor plugged into motor slot 2 of motor controller 0, back right wheel motor
+    - motorFrontR = Motor plugged into motor slot 1 of motor controller 1, front right wheel motor
+    - motorFrontB = Motor plugged into motor slot 2 of motor controller 1, front left wheel motor
+    - motorBack1 = Motor plugged into motor slot 1 of motor controller 0, back left wheel motor
+    - motorBack2 = Motor plugged into motor slot 2 of motor controller 0, back right wheel motor
     
   Servos:
     - 
 
 CONTROL MAP
   Controller 1 (Driver 1):
-    - 
+    - Left Joystick = controls speed of left side wheels of the robot.
+    - Right Joystick = controls speed of the right side wheels of the robot.
     
   Controller 2 (Driver 2):
     - 
