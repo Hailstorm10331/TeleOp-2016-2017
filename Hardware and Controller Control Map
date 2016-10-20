@@ -7,7 +7,7 @@ HARDWARE MAP
   
   Motors: 
     - motorFrontR = Motor plugged into motor slot 1 of motor controller 1, front right wheel motor
-    - motorFrontB = Motor plugged into motor slot 2 of motor controller 1, front left wheel motor
+    - motorFrontL = Motor plugged into motor slot 2 of motor controller 1, front left wheel motor
     - motorBack1 = Motor plugged into motor slot 1 of motor controller 0, back left wheel motor
     - motorBack2 = Motor plugged into motor slot 2 of motor controller 0, back right wheel motor
     
@@ -16,8 +16,8 @@ HARDWARE MAP
 
 CONTROL MAP
   Controller 1 (Driver 1):
-    - Left Joystick = controls speed of left side wheels of the robot.
-    - Right Joystick = controls speed of the right side wheels of the robot.
+    - Left Joystick = controls the left side wheel speed.
+    - Right Joystick = controls the right side wheel speed.
     
   Controller 2 (Driver 2):
     - 
