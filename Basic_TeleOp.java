@@ -13,7 +13,7 @@ import com.qualcomm.robotcore.util.Range;
 
 @TeleOp(name="Basic TeleOp", group="TeleOp")
 
-public class ThunderBasicTeleOp2016_2017 extends OpMode {
+public class HailstormBasicTeleOp2016_2017 extends OpMode {
 
     private DcMotorController motorControllerP0;    // Motor Controller in port 0 of Core
     private DcMotorController motorControllerP1;    // Motor Controller in port 1 of Core
@@ -31,7 +31,7 @@ public class ThunderBasicTeleOp2016_2017 extends OpMode {
         motorControllerP1 = hardwareMap.dcMotorController.get("MCP1");
 
 
-        motor1 = hardwareMap.dcMotor.get("motorFrontR");        //MCP1
+        motor1 = hardwareMap.dcMotor.get("motorFrontR");        //MCP1 //!!!!!!!!RE-NAME THESE AFTER THEY ARE ASSIGNED!!!!###
         motor2 = hardwareMap.dcMotor.get("motorFrontL");        //MCP1
         motor3 = hardwareMap.dcMotor.get("motorBack1");         //MCP0          Back of motor 1
         motor4 = hardwareMap.dcMotor.get("motorBack2");         //MCP0          Back of motor 2
@@ -48,7 +48,7 @@ public class ThunderBasicTeleOp2016_2017 extends OpMode {
 
     @Override
     public void loop() {                                                                                                     //constant loop that rechecks about every 20ms
-        double GearRatio = 0.25;                                                                                             //We geared up from 80 teeth to 40 teeth: this is needed so that we don't go too fast)
+        //double GearRatio = 0.25;                                                                                             
         double leftpower = Math.pow(gamepad1.left_stick_y * GearRatio * -1, 3/*The power the value before is raised */);     //set's a value for power equal to the opposite of the value of the joysticks for the left
         double rightpower = Math.pow(gamepad1.right_stick_y * GearRatio, 3);                                                 //set's a value for power equal to the value of the joysticks for the right
 
