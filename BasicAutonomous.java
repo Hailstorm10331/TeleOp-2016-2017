@@ -61,10 +61,10 @@ public class ThunderBasicAuto2016_2017 extends OpMode {
         motorControllerP0 = hardwareMap.dcMotorController.get("MCP0");
         motorControllerP1 = hardwareMap.dcMotorController.get("MCP1");
 
-        motor1 = hardwareMap.dcMotor.get("motorFrontR");
-        motor2 = hardwareMap.dcMotor.get("motorFrontL");
-        motor3 = hardwareMap.dcMotor.get("motorBack1");
-        motor4 = hardwareMap.dcMotor.get("motorBack2");
+        Controller1motor1 = hardwareMap.dcMotor.get("motorFrontR");
+        Controller1motor2 = hardwareMap.dcMotor.get("motorFrontL");
+        Controller2motor1 = hardwareMap.dcMotor.get("motorBack2");       //Don't have the wiring to access Controller 2
+        Controller2motor2 = hardwareMap.dcMotor.get("motorBack1");
 
         /**Setting channel modes
          *  When setting channel modes,  use the names that are declared to the motors. */
