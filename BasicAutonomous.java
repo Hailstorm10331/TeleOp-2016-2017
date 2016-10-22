@@ -45,37 +45,38 @@ public class ThunderBasicAuto2016_2017 extends OpMode {
 
     /** Declaring electronics
      * This can be done with a separate class and can make creating code much easier / simpler. */
-    private DcMotorController motorControllerP0;    // Motor Controller in port 0 of Core
     private DcMotorController motorControllerP1;    // Motor Controller in port 1 of Core
+    private DcMotorController motorControllerP2;    // Motor Controller in port 2 of Core
 
-    private DcMotor motor1;                         // Motor 1: port 1 in Motor Controller 1
-    private DcMotor motor2;                         // Motor 2: port 2 in Motor Controller 1
-    private DcMotor motor3;                         // Motor 3: port 1 in Motor Controller 0
-    private DcMotor motor4;                         // Motor 4: port 2 in Motor Controller 0
+    private DcMotor controller1_motorR;                         // port 1 in Motor Controller 1
+    private DcMotor controller1_motorL;                         // port 2 in Motor Controller 1
+    private DcMotor controller2_motorR;                         // port 1 in Motor Controller 2
+    private DcMotor controller2_motorL;                         // port 2 in Motor Controller 2
 
     /* Declaring variables */
 
     @Override
     public void init() {
         /** Initializing and mapping electronics (motors, motor controllers, servos, etc.) */
-        motorControllerP0 = hardwareMap.dcMotorController.get("MCP0");
-        motorControllerP1 = hardwareMap.dcMotorController.get("MCP1");
+        motorControllerP1 = hardwareMap.dcMotorController.get("MCP0");
+        motorControllerP2 = hardwareMap.dcMotorController.get("MCP1");
 
-        Controller1motor1 = hardwareMap.dcMotor.get("motorFrontR");
-        Controller1motor2 = hardwareMap.dcMotor.get("motorFrontL");
-        Controller2motor1 = hardwareMap.dcMotor.get("motorBack2");       //Don't have the wiring to access Controller 2
-        Controller2motor2 = hardwareMap.dcMotor.get("motorBack1");
+        controller1_motorR = hardwareMap.dcMotor.get("motorFrontR");
+        controller1_motorL = hardwareMap.dcMotor.get("motorFrontL");
+        controller2_motorL = hardwareMap.dcMotor.get("motorBack2");       //Don't have the wiring to access Controller 2
+        controller2_motorR = hardwareMap.dcMotor.get("motorBack1");
 
         /**Setting channel modes
          *  When setting channel modes,  use the names that are declared to the motors. */
-        motor1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        motor2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        motor3.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        motor4.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        controller1_motorR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        controller1_motorL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        controller2_motorL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        controller2_motorR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
     }
     @Override
     public void loop() {
+        
 
     }
 
