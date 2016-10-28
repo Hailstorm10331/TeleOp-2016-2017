@@ -76,7 +76,22 @@ public class ThunderBasicAuto2016_2017 extends OpMode {
     }
     @Override
     public void loop() {
+        /*
+        To do:
+        1. Set Color
+        2. Use color sensor to find the white line
+        3. Then go up the white line
+        4. Press our Color
         
+        ==>
+            - Turn on the color sensor
+            - Detect the button
+     
+        
+        ** Color sensor is connected to port 5
+        
+        
+        */
 
     }
 
