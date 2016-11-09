@@ -79,9 +79,14 @@ public class ThunderBasicAuto2016_2017 extends OpMode {
         /*
         To do:
         1. Set Color
-        2. Use color sensor to find the white line
-        3. Then go up the white line
-        4. Press our Color
+        2. Move forward
+        3. Turn right(blue) left(red)
+        4. Activate color sensor to find the white line
+        5. Move forward
+        6. When white line is found, follow for a certain distance. 
+        7. Activate color sensor in front
+        8. Sensing right side first. If color matches Team color, move forward, pressing the button.
+           If not, move left then move forward. 
         
         ==>
             - Turn on the color sensor
