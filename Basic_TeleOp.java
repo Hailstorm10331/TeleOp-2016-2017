@@ -50,7 +50,7 @@ public class HailstormBasicTeleOp2016_2017 extends OpMode {
     public void loop() {                                                                                                     //constant loop that rechecks about every 20ms
         double GearRatio = 1;                                                                                             
         double leftpower = Math.pow(gamepad1.left_stick_y * GearRatio * -1, 3/*The power the value before is raised */);     //sets a value for power equal to the opposite of the value of the joysticks for the left
-        double rightpower = Math.pow(gamepad1.right_stick_y * GearRatio, 3);                                                 //sets a value for power equal to the value of the joysticks for the right
+        double rightpower = Math.pow(gamepad1.right_stick_y * GearRatio* -1, 3);                                                 //sets a value for power equal to the value of the joysticks for the right
 
         leftpower = Range.clip(leftpower, -1, 1);        //gamepad controllers have a value of 1 when you push it to its maximum foward
         rightpower = Range.clip(rightpower, -1, 1);      //range of power, min first then max
