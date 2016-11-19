@@ -4,7 +4,7 @@
         <Motor name="motorFrontR" port="1" />
         <Motor name="motorFrontL" port="2" />
     </MotorController>
-    <MotorController name="MCP0" serialNumber="A104OQ68">
+    <MotorController name="MCP2" serialNumber="A104OQ68">
         <Motor name="motorBack1" port="1" />
         <Motor name="motorBack2" port="2" />
     </MotorController>
