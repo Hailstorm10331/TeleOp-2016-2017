@@ -1,6 +1,12 @@
 package org.firstinspires.ftc.teamcode;
 
 /**
+Robot starts --> Robot turns right --> Robot goes straight until it hits the wall using the rouch sensor in the front
+--> once it hits the wall, turn left
+
+
+
+/**
  * Created by Alex on 10/12/2016.
  */
 
