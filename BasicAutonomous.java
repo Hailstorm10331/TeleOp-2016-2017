@@ -43,7 +43,7 @@ import com.qualcomm.robotcore.hardware.DcMotorController;
  * shown in the opmode list inside the Driver Station app.
  * */
 
-public class ThunderBasicAuto2016_2017 extends OpMode {
+public class Basic Autonomous extends LinearOpMode {
     /* Note:
      * When you extend OpMode, you must declare the methods init() and loop()
      */
@@ -62,7 +62,7 @@ public class ThunderBasicAuto2016_2017 extends OpMode {
     /* Declaring variables */
 
     @Override
-    public void init() {
+    public void runOpMode throws InterruptedException() {
         /** Initializing and mapping electronics (motors, motor controllers, servos, etc.) */
         motorControllerP1 = hardwareMap.dcMotorController.get("MCP0");
         motorControllerP2 = hardwareMap.dcMotorController.get("MCP1");
@@ -78,10 +78,26 @@ public class ThunderBasicAuto2016_2017 extends OpMode {
         controller1_motorL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         controller2_motorL.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         controller2_motorR.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        
+        
+        motor1.setDirection(DcMotorSimple.Direction.REVERSE);
+        motor3.setDirection(DcMotorSimple.Direction.REVERSE);
+
+        waitForStart();
+
+        MoveForward(0.5, 1000/*milliseconds*/);
+    }
+
+    public void MoveForward(double power, long time)throws InterruptedException{
+        motor1.setPower(power);
+        motor2.setPower(power);
+        motor3.setPower(power);
+        motor4.setPower(power);
+
+        Thread.sleep(time);
 
     }
-    @Override
-    public void loop() {
+}
         /*
         To do:
         1. Set Color
@@ -104,6 +120,6 @@ public class ThunderBasicAuto2016_2017 extends OpMode {
         
         */
 
-    }
+    
 
-}
+
