@@ -4,13 +4,14 @@ HARDWARE MAP
   Motor Controllers:
     - MCP1 = Motor controller plugged into port 6 of the core power module
     - MCP2 = Motor controller plugged into port 4 of the core power module
+    - MCP3 = Motor controller plugged into port 3 of the core power module
   
   Motors: 
     - motorFrontR = Motor plugged into motor slot 1 of motor controller 1, front right wheel motor
     - motorFrontL = Motor plugged into motor slot 2 of motor controller 1, front left wheel motor
     - motorBack1 = Motor plugged into motor slot 1 of motor controller 2, back left wheel motor
     - motorBack2 = Motor plugged into motor slot 2 of motor controller 2, back right wheel motor
-    
+    - motorArm = Motor plugged into motor slot 1 of motor controller 3, arm motor 
   Servos:
     - 
 
@@ -20,4 +21,4 @@ CONTROL MAP
     - Right Joystick = controls the right side wheel speed.
     
   Controller 2 (Driver 2):
-    - 
+    - Left Joystick = controls arm direction 
