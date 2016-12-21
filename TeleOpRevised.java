@@ -9,8 +9,8 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 @Disabled
 public class HailstormTele extends OpMode {
 
-    private DcMotor fr, fl, br, bl;
-    private double leftPower, rightPower;
+    private DcMotor fr, fl, br, bl, arm;
+    private double leftPower, rightPower, armPower;
 
     @Override
     public void init() {
@@ -18,20 +18,23 @@ public class HailstormTele extends OpMode {
         fl = hardwareMap.dcMotor.get("fl");
         br = hardwareMap.dcMotor.get("br");
         bl = hardwareMap.dcMotor.get("bl");
+        arm = hardwareMap.dcMotor.get("arm");
 
-        fl.setDirection(DcMotor.Direction.REVERSE);
-        bl.setDirection(DcMotor.Direction.REVERSE);
+        fr.setDirection(DcMotor.Direction.REVERSE);
+        br.setDirection(DcMotor.Direction.REVERSE);
     }
 
     @Override
     public void loop() {
         leftPower = gamepad1.left_stick_y;
         rightPower = gamepad1.right_stick_y;
+        armPower = gamepad2.left_stick_x;
 
         fr.setPower(rightPower);
         fl.setPower(leftPower);
         br.setPower(rightPower);
         bl.setPower(leftPower);
+        arm.setPower(armPower);
     }
 
 }
