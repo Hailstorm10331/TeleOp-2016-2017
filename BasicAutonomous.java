@@ -56,7 +56,7 @@ public class Basic Autonomous extends LinearOpMode {
         motor3.setDirection(DcMotorSimple.Direction.REVERSE);
 
         waitForStart();
-        /* This is where the autonomous code will start
+        /* This is where the autonomous code will start...
          */
 
         MoveForward(0.5, 1000/*milliseconds*/);
