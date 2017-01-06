@@ -28,8 +28,8 @@ public class HailstormTele extends OpMode {            //declaring that this is 
 
     @Override
     public void loop() {
-        leftPower = gamepad1.left_stick_y;
-        rightPower = gamepad1.right_stick_y;
+        leftPower = -gamepad1.left_stick_y;
+        rightPower = -gamepad1.right_stick_y;
 
         fr.setPower(rightPower);
         fl.setPower(leftPower);
