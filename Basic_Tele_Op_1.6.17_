@@ -1,0 +1,43 @@
+package org.firstinspires.ftc.robotcontroller.internal; //declaring that this is the package to use
+
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.DcMotor;
+                                                        //importing the different modes
+
+@TeleOp(name="Template: Iterative OpMode", group="Iterative Opmode")
+@Disabled
+public class HailstormTele extends OpMode {            //declaring that this is the class: HailstormTele
+
+    private DcMotor fr, fl, br, bl, sweeper, arm;                    //these are the different motors
+    private double leftPower, rightPower;              // ?
+
+    @Override
+    public void init() {
+        fr = hardwareMap.dcMotor.get("fr");
+        fl = hardwareMap.dcMotor.get("fl");
+        br = hardwareMap.dcMotor.get("br");
+        bl = hardwareMap.dcMotor.get("bl");            //?declaring variables for the motors ?When did we declare the motors?
+        sweeper = hardwareMap.dcMotor.get("sweeper");
+        arm = hardwareMap.dcMotor.get("arm");
+
+        fl.setDirection(DcMotor.Direction.REVERSE);
+        bl.setDirection(DcMotor.Direction.REVERSE);    //Moving of the wheels
+    }
+
+    @Override
+    public void loop() {
+        leftPower = gamepad1.left_stick_y;
+        rightPower = gamepad1.right_stick_y;
+
+        fr.setPower(rightPower);
+        fl.setPower(leftPower);
+        br.setPower(rightPower);
+        bl.setPower(leftPower);                       //This is moving the wheels each time gamepad is moved
+
+        sweeper.setPower(-gamepad2.right_stick_y);
+        arm.setPower(gamepad2.left_stick_x);
+    }
+
+}
